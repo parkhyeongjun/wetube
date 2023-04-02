@@ -1,7 +1,9 @@
-doctype html 
-html (lang ="ko")
-    head 
-        title Wetube 
-    body 
-        h1 Welcome
-        footer &copy; 2023 now
+extends base.pug
+include mixins/video
+
+block content
+    h2 Welcome here is trending videos
+    each video in videos
+        +video(video)
+    else 
+        li Nothing Found
